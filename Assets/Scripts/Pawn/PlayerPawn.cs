@@ -63,4 +63,12 @@ public class PlayerPawn : Pawn
     {
         transform.Rotate(0.0f, -yawRotationAmount * Time.deltaTime, 0.0f);
     }
+
+    public override void Shoot()
+    {
+        if (shooter != null)
+        {
+            shooter.Shoot();
+        }
+    }
 }

@@ -4,6 +4,8 @@ public abstract class Pawn : MonoBehaviour
 {
     protected Rigidbody rb;
 
+    public Shooter shooter;
+
     public float forceAmount;
 
     public float yawRotationAmount;
@@ -16,6 +18,8 @@ public abstract class Pawn : MonoBehaviour
     public virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        shooter = GetComponent<Shooter>();
     }
 
     // Update is called once per frame
@@ -39,4 +43,6 @@ public abstract class Pawn : MonoBehaviour
     public abstract void PitchClockwise();
 
     public abstract void PitchCounterclockwise();
+
+    public abstract void Shoot();
 }

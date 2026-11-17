@@ -44,6 +44,14 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Game Over!");
         }
+
+        else if (asteroidList != null)
+        { 
+            if (asteroidList.Count == 0)
+            {
+                Debug.Log("You Win!");
+            }
+        }
     }
 
     public void AddToScore(int scoreToAdd)

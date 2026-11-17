@@ -2,23 +2,23 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float lifetime;
+    public float bulletSpeed;
 
-    public float forceAmount;
+    public float lifetime;
 
     public float damageAmount;
 
-    public Rigidbody2D rb;
+    public Rigidbody rb;
 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
 
         if (rb != null)
         {
-            rb.AddForce(transform.up * forceAmount, ForceMode2D.Impulse);
+            rb.AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
         }
 
         Destroy(gameObject, lifetime);
@@ -30,9 +30,9 @@ public class Bullet : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Health health = collision.GetComponent<Health>();
+        Health health = other.GetComponent<Health>();
 
         if (health != null)
         {
