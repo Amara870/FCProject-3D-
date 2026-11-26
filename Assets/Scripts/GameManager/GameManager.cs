@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour
         if (playerController.pawn == null)
         {
             Debug.Log("Game Over!");
+            SceneManager.LoadScene("GameOver");
         }
 
         else if (asteroidList != null)

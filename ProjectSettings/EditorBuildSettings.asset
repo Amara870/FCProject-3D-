@@ -9,8 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/GameView.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Start.unity
     guid: b287dfeaa2da63446b218da66a0dafbe
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 73c38507a20bd464e91e38f611ee1813
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 5399edce04cfebb42b4ae93d76ea64bf
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 11c008b6290fd13459c8393c9513a6aa
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: 9ecc601ac4c57c74abadfad9429de86f
