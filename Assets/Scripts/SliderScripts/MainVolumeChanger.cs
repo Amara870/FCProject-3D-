@@ -30,7 +30,6 @@ public class MainVolumeChanger : MonoBehaviour
 
     public void OnMainVolumeChange()
     {
-
         float newVolume = mainSlider.value;
         if (newVolume <= 0)
         {
@@ -43,6 +42,8 @@ public class MainVolumeChanger : MonoBehaviour
         }
 
         audioMixer.SetFloat("MainAudio", newVolume);
+        PlayerPrefs.SetFloat("mainAudio", newVolume);
+        PlayerPrefs.Save();
     }
 
     public void OnMusicVolumeChanger()
@@ -59,6 +60,8 @@ public class MainVolumeChanger : MonoBehaviour
         }
 
         audioMixer.SetFloat("MusicAudio", newVolume);
+        PlayerPrefs.SetFloat("musicAudio", newVolume);
+        PlayerPrefs.Save();
     }
 
     public void OnSFXVolumeChanger()
@@ -75,6 +78,8 @@ public class MainVolumeChanger : MonoBehaviour
         }
 
         audioMixer.SetFloat("SFXAudio", newVolume);
+        PlayerPrefs.SetFloat("sFXAudio", newVolume);
+        PlayerPrefs.Save();
     }
 
     public void OnEnemiesVolumeChanger()
@@ -91,5 +96,8 @@ public class MainVolumeChanger : MonoBehaviour
         }
 
         audioMixer.SetFloat("EnemiesAudio", newVolume);
+        PlayerPrefs.SetFloat("enemiesAudio", newVolume);
+        PlayerPrefs.Save();
     }
+
 }
